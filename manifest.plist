@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>needs-shine</key>
+                    <true/>
+                    <key>url</key>
+                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/512.png?inline=false</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>needs-shine</key>
+                    <true/>
+                    <key>url</key>
+                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/57.png?inline=false</string>
+                </dict>
+                <dict>
+                     <key>kind</key>
+                    <string>software-package</string>
+                    <key>url</key>
+                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/Payload.ipa?inline=false</string>
+                </dict>
+            </array>
+            <key>metadata</key>
+            <dict>
+                <key>bundle-identifier</key>
+                <string>ttttt.ztodemo</string>
+                <key>bundle-version</key>
+                <string>1.0.0</string>
+                <key>kind</key>
+                <string>software</string>
+                <key>title</key>
+                <string>ZtoDemo</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
