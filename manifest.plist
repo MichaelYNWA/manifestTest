@@ -13,7 +13,7 @@
                     <key>needs-shine</key>
                     <true/>
                     <key>url</key>
-                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/512.png?inline=false</string>
+                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/512.png</string>
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -21,13 +21,13 @@
                     <key>needs-shine</key>
                     <true/>
                     <key>url</key>
-                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/57.png?inline=false</string>
+                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/57.pnge</string>
                 </dict>
                 <dict>
                      <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>https://gitlab.oa.ztoec.com/app-nativeplugins/manifesttest/-/raw/main/Payload.ipa?inline=false</string>
+                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/Payload.png</string>
                 </dict>
             </array>
             <key>metadata</key>
