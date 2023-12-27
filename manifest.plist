@@ -13,7 +13,7 @@
                     <key>needs-shine</key>
                     <true/>
                     <key>url</key>
-                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/512.png</string>
+                    <string>http://172.16.8.16/512.png</string>
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -21,25 +21,25 @@
                     <key>needs-shine</key>
                     <true/>
                     <key>url</key>
-                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/57.png</string>
+                    <string>http://172.16.8.16/57.png</string>
                 </dict>
                 <dict>
                      <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>https://raw.githubusercontent.com/MichaelYNWA/manifestTest/main/Payload.ipa</string>
+                    <string>http://172.16.8.16/Payload.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>ttttt.ztodemo</string>
+                <string>ztopay.app-ios</string>
                 <key>bundle-version</key>
                 <string>1.0.0</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>ZtoDemo</string>
+                <string>纷享生活原生</string>
             </dict>
         </dict>
     </array>
