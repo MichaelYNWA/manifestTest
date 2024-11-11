@@ -1,0 +1,141 @@
+
+<!--
+ * @Author: houbaoguo
+ * @Date: 2024-04-02 11:35:06
+ * @Description: 
+ * @LastEditTime: 2024-11-11 13:54:51
+ * @LastEditors: houbaoguo
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var coverSupport =
+        'CSS' in window &&
+        typeof CSS.supports === 'function' &&
+        (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+          (coverSupport ? ', viewport-fit=cover' : '') +
+          '" />'
+      )
+    </script>
+    <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        /* background-color: red; */
+        /* height: 100vh; */
+        /* border: 1px solid red; */
+        height: 100vh;
+        padding-top: 100px;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="test">ios test</button>
+    <button id="test2">android test</button>
+    <button id="test3">获取地理位置</button>
+  <!-- Code injected by live-server -->
+<script>
+  // <![CDATA[  <-- For SVG support
+  if ('WebSocket' in window) {
+    (function () {
+      function refreshCSS() {
+        var sheets = [].slice.call(document.getElementsByTagName("link"));
+        var head = document.getElementsByTagName("head")[0];
+        for (var i = 0; i < sheets.length; ++i) {
+          var elem = sheets[i];
+          var parent = elem.parentElement || head;
+          parent.removeChild(elem);
+          var rel = elem.rel;
+          if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+          }
+          parent.appendChild(elem);
+        }
+      }
+      var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+      var address = protocol + window.location.host + window.location.pathname + '/ws';
+      var socket = new WebSocket(address);
+      socket.onmessage = function (msg) {
+        if (msg.data == 'reload') window.location.reload();
+        else if (msg.data == 'refreshcss') refreshCSS();
+      };
+      if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+        console.log('Live reload enabled.');
+        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+      }
+    })();
+  }
+  else {
+    console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+  }
+  // ]]>
+</script>
+</body>
+</html>
+<script>
+  new window.VConsole()
+  // 注册自定义事件监听，JARVIS_BRIDGE_READY
+  document.addEventListener('JARVIS_BRIDGE_READY', () => {
+    console.log('JARVIS_BRIDGE_READY')
+    jarvis?.hideWebviewLoading()
+  })
+
+  document.getElementById('test').addEventListener('click', () => {
+    // jarvis.login({
+    //   data: {
+    //     authKeys: ['userName', 'mobile'],
+    //   },
+    // })
+
+    // window.location.href = 'ztopays://customapi/ztpay?sceneCode=7ENep0fd'
+    const params = {
+      cinemaCode: 'mk99990007',
+      clientId: '渠道 1D',
+      orderNo: 'YP202301040922081375758',
+      orderType: 'film',
+      payAmount: '42.00',
+    }
+    window.webkit.messageHandlers.mqPay.postMessage(params)
+  })
+  document.getElementById('test2').addEventListener('click', () => {
+    const params = {
+      cinemaCode: 'mk99990007',
+      clientId: '渠道 1D',
+      orderNo: 'YP202301040922081375758',
+      orderType: 'film',
+      payAmount: '42.00',
+    }
+    window.mqApi.pay(params)
+  })
+
+  document.getElementById('test3').addEventListener('click', () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log('🚀 ~ document.getElementById ~ position:', position)
+          alert(
+            `纬度:${position.coords.latitude},经度:${position.coords.longitude}`
+          )
+        },
+        (error) => {
+          console.log('🚀 ~ document.getElementById ~ error:', error)
+        }
+      )
+    } else {
+      alert('当前浏览器不支持地理位置功能。')
+    }
+  })
+</script>
